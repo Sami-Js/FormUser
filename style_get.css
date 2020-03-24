@@ -1,0 +1,32 @@
+body {
+  height: 5000px;
+}
+
+h1 {
+  font-size: 20px;
+  padding: 20px 0;
+}
+
+.form-get {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  min-width: 60%;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 20px 0;
+}
+
+.form-get label {
+  width: 100px;
+}
+
+.form-get input {
+  margin: 0 20px;
+}
+
+.form-get button {
+  padding: auto 40px;
+}
+/*# sourceMappingURL=style_get.css.map */

@@ -1,0 +1,143 @@
+.flex, .box-pagination {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.container {
+  padding: 0 !important;
+}
+
+.radio {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.pagination {
+  padding: 30px 0;
+}
+
+form {
+  border: 1px solid #e8e8e8;
+}
+
+.two-element {
+  background-color: #f7f7f7;
+  border-left: 3px solid #3b91f3;
+}
+
+.form-row {
+  margin: 20px 0;
+  -webkit-box-sizing: content-box;
+          box-sizing: content-box;
+  padding: 10px 20px;
+}
+
+.radio {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  font-size: 17px;
+}
+
+.address-inp {
+  color: #3a7ecc;
+  font-weight: bold;
+}
+
+h1 {
+  background-color: #f7f7f7;
+  font-size: 2rem;
+  padding: 20px 0;
+}
+
+.btns {
+  background-color: #f7f7f7;
+}
+
+.btns .btn {
+  padding: 10px 2rem;
+}
+
+.link {
+  width: 100%;
+}
+
+.link label {
+  display: block;
+}
+
+.nav-link {
+  color: white;
+}
+
+.box-pagination {
+  width: 100%;
+  margin: 5rem 0 1rem;
+}
+
+.section-header {
+  margin: 5rem 0;
+}
+
+.nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 80%;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+
+.input-show {
+  margin: 0 auto;
+  min-width: 40%;
+}
+
+.input-show .nav-link {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+
+.input-show .nav-link button {
+  margin-left: 10px;
+  padding: auto 10px;
+}
+
+.card-body {
+  border-top: 1px solid #cccbcb;
+  padding: 0 !important;
+}
+
+td {
+  width: 50%;
+  padding: 1rem;
+}
+
+b td {
+  text-align: right;
+}
+
+.row {
+  margin-left: 0px;
+  margin-right: 0px;
+}
+/*# sourceMappingURL=style.css.map */

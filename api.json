@@ -1,0 +1,190 @@
+[
+    {
+      "esqId": 5,
+      "processId": 247,
+      "licenseType": 0,
+      "name": "string",
+      "date": "2020-02-23T12:10:57.103",
+      "q1A": "string",
+      "q1B": "string",
+      "q1C": true,
+      "q1D": "string",
+      "q1E": true,
+      "q1F": 0,
+      "q1G": true,
+      "q1G1": "string",
+      "q1h": true,
+      "q1h1": "string",
+      "q5A": true,
+      "q5A1": "string",
+      "q5B": true,
+      "q5B1": "string",
+      "q5C": true,
+      "q5C1": "string",
+      "q10A": true,
+      "q7A": true,
+      "q7B": true,
+      "q7C": true,
+      "q15A": true,
+      "q15B": true,
+      "q15C": true,
+      "q15D": true,
+      "rawMaterials": [
+        {
+          "materialsID": 3,
+          "materialF": "string",
+          "process": "string",
+          "deliveryMethod": "string",
+          "storageMethod": "string",
+          "onSiteStorageQuantity": "string",
+          "maxHourlyConsumption": 0,
+          "annualConsumption": 0,
+          "esqId": 5
+        }
+      ],
+      "auxiliariesMaterials": [
+        {
+          "aMaterialsID": 2,
+          "aMaterialF": "string",
+          "aProcess": "string",
+          "aDeliveryMethod": "string",
+          "aStorageMethod": "string",
+          "aOnSiteStorageQuantity": "string",
+          "aMaxHourlyConsumption": 0,
+          "aAnnualConsumption": 0,
+          "esqId": 5
+        }
+      ],
+      "products": [
+        {
+          "productsID": 1,
+          "process": "string",
+          "productByProduct": "string",
+          "maxHourlyProduction": 0,
+          "annualProduction": 0,
+          "storageDeliveryMethod": "string",
+          "maximumStorageCapacity": 0,
+          "esqId": 5
+        }
+      ],
+      "fuels": null,
+      "waterConsumptions": [
+        {
+          "waterConsumptionID": 1,
+          "process": "string",
+          "averageConsumption": 0,
+          "maximumConsumption": 0,
+          "isTreatmentRequired": true,
+          "treatmentRequiredList": "string",
+          "esqId": 5
+        }
+      ],
+      "effluentWastewaterDischarges": [
+        {
+          "effluentWastewaterDischargesID": 1,
+          "source": "string",
+          "dischargeFlow": 0,
+          "temp": 0,
+          "ph": 0,
+          "tds": 0,
+          "toc": 0,
+          "tss": 0,
+          "preTreatmentRequired": true,
+          "providePreTreatment": "string",
+          "esqId": 5
+        }
+      ],
+      "hazardousMaterials": [
+        {
+          "hazardousID": 1,
+          "hazardousSubstance": "string",
+          "physicalProperties": "string",
+          "hazardousMaterialClassification1": "string",
+          "processUnitUsed": 0,
+          "maxStorageQuantity": 0,
+          "deliveryStorageMethod": "string",
+          "surplusDisposalMethod": "string",
+          "esqId": 5
+        }
+      ],
+      "airEmissionsPointSources": [
+        {
+          "airEmissionsPointID": 1,
+          "source": "string",
+          "unitID": 0,
+          "pollutant": "string",
+          "pollutantConcentration": "string",
+          "emissionRate": 0,
+          "emissionHeight": 0,
+          "emissionControl": "string",
+          "esqId": 5
+        }
+      ],
+      "fugitiveAirEmissions": [
+        {
+          "fugitiveAirID": 1,
+          "vochapSource3Name": "string",
+          "vochapSource3Number": 0,
+          "component": "string",
+          "uncontrolledEmission": 0,
+          "controlEfficiency": 0,
+          "controlledEmissions": 0,
+          "esqId": 5
+        }
+      ],
+      "solidLiquidWastes": [
+        {
+          "effluentWastewaterDischargesID": 1,
+          "source": "string",
+          "amountGenerated": 0,
+          "composition": "string",
+          "maximumStorage": 0,
+          "treatmentMethodsLocation": "string",
+          "esqId": 5
+        }
+      ],
+      "noises": [
+        {
+          "noiseID": 1,
+          "source": "string",
+          "noiseLevelInsidePremises": 0,
+          "noiseLevelatBoundaryFence": 0,
+          "controlMethods": "string",
+          "esqId": 5
+        }
+      ],
+      "flares": null,
+      "incinerators": null,
+      "loadingUnloadingOperations": [
+        {
+          "loadingID": 1,
+          "esqId": 5
+        }
+      ],
+      "dredgingOperations": {
+        "dredgingOperationsID": 1,
+        "q16": true,
+        "listThem": "string",
+        "esqId": 5
+      },
+      "otherInformation": [
+        {
+          "otherInformationID": 1,
+          "q17A": true,
+          "q17B": true,
+          "bMaterialused": "string",
+          "q17C": true,
+          "cMaterialused": "string",
+          "q17D": true,
+          "q17D1": "string",
+          "q17E": true,
+          "q17E1": "string",
+          "q17F": true,
+          "q17G": true,
+          "q17G1": "string",
+          "additionalInformation": "string",
+          "esqId": 5
+        }
+      ]
+    }
+  ]
