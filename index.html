@@ -12,7 +12,6 @@
 
 <body>
 
-
     <header class="section-header">
         <nav class="navbar navbar-dark bg-dark fixed-top">
             <a href="#" class="navbar-brand">GET DATA</a>
@@ -30,6 +29,7 @@
                     </a>
                 </li>
             </ul>
+            <button type="button" id="submit">SUBMIT</button>
         </nav>
     </header>
 
@@ -70,8 +70,8 @@
 
 
     <div class="container mb-5">
-            <!-- first slide  -->
-            <form name="EnvForm" id="EnvForm"  class="form_group d-none">
+        <!-- first slide  -->
+        <form name="EnvForm" id="EnvForm" class="form_group d-none">
             <div class="form-row">
                 <div class="col-md-12 mb-3">
                     <label class="address-inp">Name</label>
@@ -447,93 +447,95 @@
                     </div>
                 </div>
             </div>
-            </form>
+        </form>
 
-            <!-- second slide  -->
-            <form name="rawMForm" id="rawMForm" class="form_group">
-                <div class="form-row">
-                    <div class="header-address">
-                        <h4>Raw Materials :</h4>
-                        <button class="btn btn-primary">New Material</button>
-                    </div>
-                    <div class="col-md-12 mb-3">
-                        <label class="address-inp">Raw Material/Feedstock </label>
-                        <input type="text" name="RawMaterial" class="form-control">
-                    </div>
-                    <div class=" md-2 col-md-12 mb-3">
-                        <label class="address-inp">Process</label>
-                        <input type="text" name="Process" class="form-control">
-                    </div>
+        <!-- first slide END -->
+
+        <!-- second slide  -->
+        <form name="rawMForm" id="rawMForm" class="form_group">
+            <div class="form-row">
+                <div class="header-address">
+                    <h4>Raw Material 1 :</h4>
+                    <button type="button" id="addMaterial" class="btn btn-primary">New Material</button>
                 </div>
-                <div class="form-row">
-                    <div class="col-md-12 mb-3">
-                        <label class="address-inp">Delivery Method</label>
-                        <input type="text" name="DeliveryMethod" class="form-control">
-                    </div>
+                <div class="col-md-12 mb-3">
+                    <label class="address-inp">Raw Material/Feedstock </label>
+                    <input type="text" name="MaterialF" class="form-control">
                 </div>
-                <div class="form-row">
-                    <div class="col-md-12 mb-3">
-                        <label class="address-inp">Storage Method</label>
-                        <input type="text" name="StorageMethod" class="form-control">
-                    </div>
-                    <div class=" md-2 col-md-12 mb-3">
-                        <label class="address-inp">On-Site Storage Quantity</label>
-                        <input type="text" name="StorageMethod" class="form-control">
-                    </div>
+                <div class=" md-2 col-md-12 mb-3">
+                    <label class="address-inp">Process</label>
+                    <input type="text" name="Process" class="form-control">
                 </div>
-                <div class="form-row">
-                    <div class="col-md-12 mb-3">
-                        <label class="address-inp">Max.Hourly Consumption <span class="text-muted">(unit)</span></label>
-                        <input type="number" name="MaxHourly" class="form-control">
-                    </div>
-                    <div class=" md-2 col-md-12 mb-3">
-                        <label class="address-inp">Annual Consumption<span class="text-muted">(unit)</span></label>
-                        <input type="number" name="AnnualConsumption" class="form-control">
-                    </div>
-                </div>
-            </form>
-            <div class="btns d-flex justify-content-between">
-                <button class="btn btn-secondary" id="prev">Previous</button>
-                <button class="btn btn-primary" id="Next">Next</button>
             </div>
+            <div class="form-row">
+                <div class="col-md-12 mb-3">
+                    <label class="address-inp">Delivery Method</label>
+                    <input type="text" name="DeliveryMethod" class="form-control">
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="col-md-12 mb-3">
+                    <label class="address-inp">Storage Method</label>
+                    <input type="text" name="StorageMethod" class="form-control">
+                </div>
+                <div class=" md-2 col-md-12 mb-3">
+                    <label class="address-inp">On-Site Storage Quantity</label>
+                    <input type="text" name="OnSiteStorageQuantity" class="form-control">
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="col-md-12 mb-3">
+                    <label class="address-inp">Max.Hourly Consumption <span class="text-muted">(unit)</span></label>
+                    <input type="number" name="MaxHourlyConsumption" class="form-control">
+                </div>
+                <div class=" md-2 col-md-12 mb-3">
+                    <label class="address-inp">Annual Consumption<span class="text-muted">(unit)</span></label>
+                    <input type="number" name="AnnualConsumption" class="form-control">
+                </div>
+            </div>
+        </form>
+        <div class="btns d-flex justify-content-between">
+            <button class="btn btn-secondary" id="prev">Previous</button>
+            <button class="btn btn-primary" id="Next">Next</button>
+        </div>
+        <!-- second slide  END -->
     </div>
 
 
 
 
-    <script>
+    <!-- <script>
 
         // speed script for switch slide 
-        
+
         // shortcat call by Id 
         let $ = (element) => document.getElementById(element);
 
-        const  forms = [ $('EnvForm') , $('rawMForm')];
-        let current = 0 ;
+        const forms = [$('EnvForm'), $('rawMForm')];
+        let current = 0;
 
-        
+
         const next = $('Next');
         const prev = $('prev');
 
-        next.addEventListener('click' , switchForm);
+        next.addEventListener('click', switchForm);
 
 
-        function switchForm(){
-            if(current >= forms.length - 1 ) return ;
+        function switchForm() {
+            if (current >= forms.length - 1) return;
             forms.forEach((elm) => elm.classList.add('d-none'));
             forms[++current].classList.remove('d-none');
         }
 
 
-        prev.addEventListener('click' , returnForm)
+        prev.addEventListener('click', returnForm)
 
-        function returnForm(){
-            if(current === 0 ) return ;
+        function returnForm() {
+            if (current === 0) return;
             forms.forEach((elm) => elm.classList.add('d-none'));
             forms[--current].classList.remove('d-none');
         }
-
-    </script>
+    </script> -->
 
 
 
@@ -546,6 +548,8 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
     <!-- Popper -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.1/popper-utils.min.js.map"></script>
+    <script src="EventHandlers.js"></script>
+    <script src="DbActions.js"></script>
 </body>
 
 </html>
