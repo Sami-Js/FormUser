@@ -1,26 +1,96 @@
 body{
-    height: 5000px ;
+    display: grid ;
+    grid-template-columns: 300px 1fr;
+    grid-template-rows: auto;
+    width: 100% ;
+    height: 100vh ;
 }
 
-h1{
-    font-size: 20px ;
-    padding: 20px 0 ;
+
+header{
+    background-color: #1d1d1d;
+    margin: 0 !important ;
+    color: white ;
+    text-align: center;
+    border-right: 1px solid #f7f7f7;
+    position: fixed;
+    left: 0 ;
+    height: 100% ;
+    width: 300px ;
+    h3{
+      background-color: #f7f7f7 ;
+      color: rgb(69, 104, 182) ;
+      padding: 1rem 0 ;
+      margin: 0 !important;
+    }
+
+    .nav{
+        .nav-item{
+            width: 100% !important;
+            padding: 0 10px;
+            & > *{
+                width: inherit;
+            }
+
+           
+            input{
+                margin: 15rem 0 1rem ;
+                text-align: center;
+            }
+        }
+
+        .btn-page{
+            padding: 0 !important;
+            a{
+                display: flex;
+                justify-content: center;
+                align-items: center ;
+                border-bottom: 1px solid rgba(70, 69, 69, 0.356) ;
+                &:hover{
+                    background-color: rgb(76, 108, 197);
+                    color: white;
+                }
+                i{
+                    margin: 10px ;
+                }
+            }
+          }
+
+    }
 }
 
-.form-get{
+
+
+h5{
     display: flex;
-    min-width: 60% ;
+    justify-content: space-between;
     align-items: center;
-    padding: 20px 0 ;
-    label{
-        width: 100px ;
-    }
+}
 
-    input{
-        margin: 0 20px ;
-    }
 
-    button{
-        padding: auto 40px ;
+#content-data{
+    position: relative;
+    .alert{
+        position: fixed;
+        top: 0;
+        width: 100%;
+        right: 0 ;
     }
 }
+
+
+.style-card:nth-child(1){
+    margin-top: 0 !important ;
+}
+.style-card{
+    margin: 40px  0 ;
+    &:nth-child(even){
+        .card-header{
+            background-color: #333f71
+        }
+    }
+    tr{
+        font-size: 14px ;
+    }
+}
+

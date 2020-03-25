@@ -1,32 +1,110 @@
 body {
-  height: 5000px;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 300px 1fr;
+      grid-template-columns: 300px 1fr;
+  -ms-grid-rows: auto;
+      grid-template-rows: auto;
+  width: 100%;
+  height: 100vh;
 }
 
-h1 {
-  font-size: 20px;
-  padding: 20px 0;
+header {
+  background-color: #1d1d1d;
+  margin: 0 !important;
+  color: white;
+  text-align: center;
+  border-right: 1px solid #f7f7f7;
+  position: fixed;
+  left: 0;
+  height: 100%;
+  width: 300px;
 }
 
-.form-get {
+header h3 {
+  background-color: #f7f7f7;
+  color: #4568b6;
+  padding: 1rem 0;
+  margin: 0 !important;
+}
+
+header .nav .nav-item {
+  width: 100% !important;
+  padding: 0 10px;
+}
+
+header .nav .nav-item > * {
+  width: inherit;
+}
+
+header .nav .nav-item input {
+  margin: 15rem 0 1rem;
+  text-align: center;
+}
+
+header .nav .btn-page {
+  padding: 0 !important;
+}
+
+header .nav .btn-page a {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  min-width: 60%;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  padding: 20px 0;
+  border-bottom: 1px solid rgba(70, 69, 69, 0.356);
 }
 
-.form-get label {
-  width: 100px;
+header .nav .btn-page a:hover {
+  background-color: #4c6cc5;
+  color: white;
 }
 
-.form-get input {
-  margin: 0 20px;
+header .nav .btn-page a i {
+  margin: 10px;
 }
 
-.form-get button {
-  padding: auto 40px;
+h5 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
-/*# sourceMappingURL=style_get.css.map */
+
+#content-data {
+  position: relative;
+}
+
+#content-data .alert {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  right: 0;
+  text-align: center;
+}
+
+.style-card:nth-child(1) {
+  margin-top: 0 !important;
+}
+
+.style-card {
+  margin: 40px  0;
+}
+
+.style-card:nth-child(even) .card-header {
+  background-color: #333f71;
+}
+
+.style-card tr {
+  font-size: 14px;
+}
+/*# sourceMappingURL=style_Get.css.map */

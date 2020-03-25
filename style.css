@@ -7,10 +7,6 @@
           justify-content: center;
 }
 
-.container {
-  padding: 0 !important;
-}
-
 .radio {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -52,12 +48,6 @@ form {
   font-weight: bold;
 }
 
-h1 {
-  background-color: #f7f7f7;
-  font-size: 2rem;
-  padding: 20px 0;
-}
-
 .btns {
   background-color: #f7f7f7;
 }
@@ -83,43 +73,9 @@ h1 {
   margin: 5rem 0 1rem;
 }
 
-.section-header {
-  margin: 5rem 0;
-}
-
-.nav {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  width: 80%;
-  -webkit-box-pack: end;
-      -ms-flex-pack: end;
-          justify-content: flex-end;
-}
-
-.input-show {
-  margin: 0 auto;
-  min-width: 40%;
-}
-
-.input-show .nav-link {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: start;
-      -ms-flex-align: start;
-          align-items: flex-start;
-}
-
-.input-show .nav-link button {
-  margin-left: 10px;
-  padding: auto 10px;
+.card-header {
+  background-color: #343a40;
+  color: white;
 }
 
 .card-body {
@@ -129,7 +85,15 @@ h1 {
 
 td {
   width: 50%;
-  padding: 1rem;
+  padding: .5rem;
+}
+
+tr {
+  border: 1px solid #dbdbdb;
+}
+
+tr:nth-child(odd) {
+  background-color: #f7f7ff;
 }
 
 b td {
@@ -139,5 +103,13 @@ b td {
 .row {
   margin-left: 0px;
   margin-right: 0px;
+}
+
+#content-spinner .green {
+  color: #09ec09;
+}
+
+#content-spinner .red {
+  color: red;
 }
 /*# sourceMappingURL=style.css.map */
