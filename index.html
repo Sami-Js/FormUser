@@ -450,7 +450,7 @@
         </form>
 
         <!-- second slide  -->
-        <div id="container-form" class="form_group d-none">
+        <div id="container-form-1" class="form_group d-none">
             <form name="rawMForm" id="rawMForm">
                 <div class="form-row">
                     <div class="header-address">
@@ -586,7 +586,7 @@
         </div>
 
         <!-- third slide -->
-        <form name="HazardousMaterialsForm" id="HazardousMaterialsForm" class="form_group">
+        <form name="HazardousMaterialsForm" id="HazardousMaterialsForm" class="form_group d-none">
             <div class="header-address pt-5 pl-4">
                 <h4>Hazardous Materials :</h4>
             </div>
@@ -610,12 +610,14 @@
                 </div>
                 <div class=" md-2 col-md-12 mb-3">
                     <label class="address-inp">If yes, provide details of type and quantities of such materials</label>
-                    <textarea class="form-control"  rows="3"></textarea>
+                    <textarea class="form-control" rows="3"></textarea>
                 </div>
             </div>
             <div class="form-row  two-element">
                 <div class="col-md-12 mb-3">
-                    <label class="address-inp">Does the facility use or generate highly toxic materials such as methyl isocyanate, phosgene, hydro fluoric acid (HF), mercury compounds, arsenic compounds, cyanides, etc.?</label>
+                    <label class="address-inp">Does the facility use or generate highly toxic materials such as methyl
+                        isocyanate, phosgene, hydro fluoric acid (HF), mercury compounds, arsenic compounds, cyanides,
+                        etc.?</label>
                     <div class="radio">
                         <div class="radio-item">
                             <label>
@@ -633,12 +635,13 @@
                 </div>
                 <div class=" md-2 col-md-12 mb-3">
                     <label class="address-inp">If yes, list the name of the materials with quantities.</label>
-                    <textarea class="form-control"  rows="3"></textarea>
+                    <textarea class="form-control" rows="3"></textarea>
                 </div>
             </div>
             <div class="form-row  two-element">
                 <div class="col-md-12 mb-3">
-                    <label class="address-inp">Does the facility use or generate carcinogenic materials such as benzene, carbon tetrachloride, vinyl chloride, hydrazine, PCBs (Polychlorinated biphenyls), etc?</label>
+                    <label class="address-inp">Does the facility use or generate carcinogenic materials such as benzene,
+                        carbon tetrachloride, vinyl chloride, hydrazine, PCBs (Polychlorinated biphenyls), etc?</label>
                     <div class="radio">
                         <div class="radio-item">
                             <label>
@@ -656,7 +659,7 @@
                 </div>
                 <div class=" md-2 col-md-12 mb-3">
                     <label class="address-inp">If yes, list the name of the materials with quantities.</label>
-                    <textarea class="form-control"  rows="3"></textarea>
+                    <textarea class="form-control" rows="3"></textarea>
                 </div>
             </div>
             <div class="form-row">
@@ -703,6 +706,162 @@
             </div>
         </form>
 
+        <!-- fourth slide -->
+        <div id="container-form-2" class="from_group">
+            <form name="FuelsForm" id="FuelsForm">
+                <div class="form-row">
+                    <div class="header-address">
+                        <h4>Fuels:</h4>
+                    </div>
+                    <div class="col-md-12 mb-3">
+                        <label class="address-inp">Process</label>
+                        <input type="text" name="Process" class="form-control">
+                    </div>
+                    <div class=" md-2 col-md-12 mb-3">
+                        <label class="address-inp">Fuel Type with Composition </label>
+                        <input type="text" name="FuelCompoistion" class="form-control">
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="col-md-12 mb-3">
+                        <label class="address-inp">Fuel Consumption
+                            <span class="text-muted">(unit)</span>
+                        </label>
+                        <input type="number" name="unitFuel" class="form-control">
+                    </div>
+                </div>
+                <div class="form-row  two-element">
+                    <div class="col-md-12 mb-3">
+                        <label class="address-inp">Alternative Fuels Used? </label>
+                        <div class="radio">
+                            <div class="radio-item">
+                                <label>
+                                    <input type="radio" data-value=true name="radio1">
+                                    true
+                                </label>
+                            </div>
+                            <div class="radio-item">
+                                <label>
+                                    <input type="radio" data-value=false name="radio1">
+                                    false
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class=" md-2 col-md-12 mb-3">
+                        <label class="address-inp">If yes, please specify type </label>
+                        <textarea class="form-control" rows="3"></textarea>
+                    </div>
+                </div>
+                <!--------------------------            Here input empty        ------------------------------------ -->
+                <input type="hidden" name="empty">
+            </form>
+            <form name="AirEmissionsPointSourcesForm" id="AirEmissionsPointSourcesForm">
+                <div class="form-row  two-element">
+                    <div class="header-address">
+                        <h4>Air Emissions :</h4>
+                    </div>
+                    <div class="col-md-12 mb-3">
+                        <label class="address-inp"> Are there any point sources that have potential to emit more than
+                            100 tons/year (before the use of abatement equipment) of any air pollutant listed in Table
+                            2A of RCER-2010, Volume I?</label>
+                        <div class="radio">
+                            <div class="radio-item">
+                                <label>
+                                    <input type="radio" data-value=true name="radio1">
+                                    true
+                                </label>
+                            </div>
+                            <div class="radio-item">
+                                <label>
+                                    <input type="radio" data-value=false name="radio1">
+                                    false
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class=" md-2 col-md-12 mb-3">
+                        <label class="address-inp"> If yes, list all such sources with estimated emission.</label>
+                        <textarea class="form-control" rows="3"></textarea>
+                    </div>
+                </div>
+                <div class="form-row  two-element">
+                    <div class="col-md-12 mb-3">
+                        <label class="address-inp">Are there any point sources that have potential to emit more than 10
+                            tons/year (before the use of abatement equipment) of any hazardous air pollutant listed in
+                            Table 2C of RCER-2010, Volume I?</label>
+                        <div class="radio">
+                            <div class="radio-item">
+                                <label>
+                                    <input type="radio" data-value=true name="radio1">
+                                    true
+                                </label>
+                            </div>
+                            <div class="radio-item">
+                                <label>
+                                    <input type="radio" data-value=false name="radio1">
+                                    false
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class=" md-2 col-md-12 mb-3">
+                        <label class="address-inp"> If yes, list all such sources with estimated emission.</label>
+                        <textarea class="form-control" rows="3"></textarea>
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="col-md-12 mb-3">
+                        <label class="address-inp">Source</label>
+                        <textarea class="form-control" rows="3"></textarea>
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="col-md-12 mb-3">
+                        <label class="address-inp">Unit ID</label>
+                        <input type="text" name="UnitId" class="form-control">
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="col-md-12 mb-3">
+                        <label class="address-inp">Pollutant</label>
+                        <input type="number" name="Pollutant1" class="form-control">
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="col-md-12 mb-3">
+                        <label class="address-inp">Pollutant Concentration 
+                            <span class="text-muted">(unit)2</span>
+                            </label>
+                        <input type="number" name="Pollutant2" class="form-control">
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="col-md-12 mb-3">
+                        <label class="address-inp">Emission Rate
+                            <span class="text-muted">(kg/hr)</span>
+                            </label>
+                        <input type="number" name="EmissionRate" class="form-control">
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="col-md-12 mb-3">
+                        <label class="address-inp">Emission  Height <span class="text-muted">(m)</span></label>
+                        <input type="text" name="EmissionHeight" class="form-control">
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="col-md-12 mb-3">
+                        <label class="address-inp">Emission 
+                            Control
+                            Method/ Efficiency </label>
+                        <input type="text" name="EmissionControl" class="form-control">
+                    </div>
+                </div>
+                <!--------------------------            Here input empty        ------------------------------------ -->
+                <input type="hidden" name="empty">
+            </form>
+        </div>
         <div class="btns d-flex justify-content-between">
             <button class="btn btn-secondary" id="prev">Previous</button>
             <button class="btn btn-primary" id="Next">Next</button>
@@ -712,7 +871,7 @@
 
 
 
-<!-- 
+    <!-- 
     <script>
 
         // speed script for switch slide 
