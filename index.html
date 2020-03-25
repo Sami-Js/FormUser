@@ -70,8 +70,8 @@
 
 
     <div class="container mb-5">
-            <!-- first slide  -->
-            <form name="EnvForm" id="EnvForm"  class="form_group d-none">
+        <!-- first slide  -->
+        <form name="EnvForm" id="EnvForm" class="form_group d-none">
             <div class="form-row">
                 <div class="col-md-12 mb-3">
                     <label class="address-inp">Name</label>
@@ -447,10 +447,11 @@
                     </div>
                 </div>
             </div>
-            </form>
+        </form>
 
-            <!-- second slide  -->
-            <form name="rawMForm" id="rawMForm" class="form_group">
+        <!-- second slide  -->
+        <div id="container-form" class="form_group">
+            <form name="rawMForm" id="rawMForm">
                 <div class="form-row">
                     <div class="header-address">
                         <h4>Raw Materials :</h4>
@@ -491,11 +492,105 @@
                         <input type="number" name="AnnualConsumption" class="form-control">
                     </div>
                 </div>
+                     <!--------------------------            Here input empty        ------------------------------------ -->
+                 <input type="hidden" name="empty">
             </form>
-            <div class="btns d-flex justify-content-between">
-                <button class="btn btn-secondary" id="prev">Previous</button>
-                <button class="btn btn-primary" id="Next">Next</button>
-            </div>
+            <form id="auxForm" name="auxForm">
+                <div class="form-row">
+                    <div class="header-address">
+                        <h4>Other Materials/ Auxiliaries Used:</h4>
+                        <button class="btn btn-primary">New Auxiliaries</button>
+                    </div>
+                    <div class="col-md-12 mb-3">
+                        <label class="address-inp">Material</label>
+                        <input type="text" name="RawMaterial" class="form-control">
+                    </div>
+                    <div class=" md-2 col-md-12 mb-3">
+                        <label class="address-inp">Process</label>
+                        <input type="text" name="Process" class="form-control">
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="col-md-12 mb-3">
+                        <label class="address-inp">Delivery Method</label>
+                        <input type="text" name="DeliveryMethod" class="form-control">
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="col-md-12 mb-3">
+                        <label class="address-inp">Storage Method</label>
+                        <input type="text" name="StorageMethod" class="form-control">
+                    </div>
+                    <div class=" md-2 col-md-12 mb-3">
+                        <label class="address-inp">On-Site Storage Quantity</label>
+                        <input type="text" name="StorageMethod" class="form-control">
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="col-md-12 mb-3">
+                        <label class="address-inp">Max.Hourly Consumption <span class="text-muted">(unit)</span></label>
+                        <input type="number" name="MaxHourly" class="form-control">
+                    </div>
+                    <div class=" md-2 col-md-12 mb-3">
+                        <label class="address-inp">Annual Consumption<span class="text-muted">(unit)</span></label>
+                        <input type="number" name="AnnualConsumption" class="form-control">
+                    </div>
+                </div>
+                    <!--------------------------            Here input empty        ------------------------------------ -->
+                    <input type="hidden" name="empty">
+            </form>
+
+            <form name="ProductsForm" id="ProductsForm">
+                <div class="form-row">
+                    <div class="header-address">
+                        <h4>Products:</h4>
+                        <button class="btn btn-primary">New Product</button>
+                    </div>
+                    <div class="col-md-12 mb-3">
+                        <label class="address-inp">Material</label>
+                        <input type="text" name="RawMaterial" class="form-control">
+                    </div>
+                    <div class=" md-2 col-md-12 mb-3">
+                        <label class="address-inp">Process</label>
+                        <input type="text" name="Process" class="form-control">
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="col-md-12 mb-3">
+                        <label class="address-inp">Delivery Method</label>
+                        <input type="text" name="DeliveryMethod" class="form-control">
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="col-md-12 mb-3">
+                        <label class="address-inp">Storage Method</label>
+                        <input type="text" name="StorageMethod" class="form-control">
+                    </div>
+                    <div class=" md-2 col-md-12 mb-3">
+                        <label class="address-inp">On-Site Storage Quantity</label>
+                        <input type="text" name="StorageMethod" class="form-control">
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="col-md-12 mb-3">
+                        <label class="address-inp">Max.Hourly Consumption <span class="text-muted">(unit)</span></label>
+                        <input type="number" name="MaxHourly" class="form-control">
+                    </div>
+                    <div class=" md-2 col-md-12 mb-3">
+                        <label class="address-inp">Annual Consumption<span class="text-muted">(unit)</span></label>
+                        <input type="number" name="AnnualConsumption" class="form-control">
+                    </div>
+                </div>
+                    <!--------------------------            Here input empty        ------------------------------------ -->
+                    <input type="hidden" name="empty">
+            </form>
+        </div>
+
+        <div class="btns d-flex justify-content-between">
+            <button class="btn btn-secondary" id="prev">Previous</button>
+            <button class="btn btn-primary" id="Next">Next</button>
+        </div>
+
     </div>
 
 
@@ -504,31 +599,31 @@
     <script>
 
         // speed script for switch slide 
-        
+
         // shortcat call by Id 
         let $ = (element) => document.getElementById(element);
 
-        const  forms = [ $('EnvForm') , $('rawMForm')];
-        let current = 0 ;
+        const forms = [$('EnvForm'), $('container-form')];
+        let current = 0;
 
-        
+
         const next = $('Next');
         const prev = $('prev');
 
-        next.addEventListener('click' , switchForm);
+        next.addEventListener('click', switchForm);
 
 
-        function switchForm(){
-            if(current >= forms.length - 1 ) return ;
+        function switchForm() {
+            if (current >= forms.length - 1) return;
             forms.forEach((elm) => elm.classList.add('d-none'));
             forms[++current].classList.remove('d-none');
         }
 
 
-        prev.addEventListener('click' , returnForm)
+        prev.addEventListener('click', returnForm)
 
-        function returnForm(){
-            if(current === 0 ) return ;
+        function returnForm() {
+            if (current === 0) return;
             forms.forEach((elm) => elm.classList.add('d-none'));
             forms[--current].classList.remove('d-none');
         }
