@@ -450,7 +450,7 @@
         </form>
 
         <!-- second slide  -->
-        <div id="container-form" class="form_group">
+        <div id="container-form" class="form_group d-none">
             <form name="rawMForm" id="rawMForm">
                 <div class="form-row">
                     <div class="header-address">
@@ -492,8 +492,8 @@
                         <input type="number" name="AnnualConsumption" class="form-control">
                     </div>
                 </div>
-                     <!--------------------------            Here input empty        ------------------------------------ -->
-                 <input type="hidden" name="empty">
+                <!--------------------------            Here input empty        ------------------------------------ -->
+                <input type="hidden" name="empty">
             </form>
             <form id="auxForm" name="auxForm">
                 <div class="form-row">
@@ -536,10 +536,9 @@
                         <input type="number" name="AnnualConsumption" class="form-control">
                     </div>
                 </div>
-                    <!--------------------------            Here input empty        ------------------------------------ -->
-                    <input type="hidden" name="empty">
+                <!--------------------------            Here input empty        ------------------------------------ -->
+                <input type="hidden" name="empty">
             </form>
-
             <form name="ProductsForm" id="ProductsForm">
                 <div class="form-row">
                     <div class="header-address">
@@ -581,10 +580,128 @@
                         <input type="number" name="AnnualConsumption" class="form-control">
                     </div>
                 </div>
-                    <!--------------------------            Here input empty        ------------------------------------ -->
-                    <input type="hidden" name="empty">
+                <!--------------------------            Here input empty        ------------------------------------ -->
+                <input type="hidden" name="empty">
             </form>
         </div>
+
+        <!-- third slide -->
+        <form name="HazardousMaterialsForm" id="HazardousMaterialsForm" class="form_group">
+            <div class="header-address pt-5 pl-4">
+                <h4>Hazardous Materials :</h4>
+            </div>
+            <div class="form-row  two-element">
+                <div class="col-md-12 mb-3">
+                    <label class="address-inp">Does the facility use or generate any radio active materials?</label>
+                    <div class="radio">
+                        <div class="radio-item">
+                            <label>
+                                <input type="radio" data-value=true name="radio1">
+                                true
+                            </label>
+                        </div>
+                        <div class="radio-item">
+                            <label>
+                                <input type="radio" data-value=false name="radio1">
+                                false
+                            </label>
+                        </div>
+                    </div>
+                </div>
+                <div class=" md-2 col-md-12 mb-3">
+                    <label class="address-inp">If yes, provide details of type and quantities of such materials</label>
+                    <textarea class="form-control"  rows="3"></textarea>
+                </div>
+            </div>
+            <div class="form-row  two-element">
+                <div class="col-md-12 mb-3">
+                    <label class="address-inp">Does the facility use or generate highly toxic materials such as methyl isocyanate, phosgene, hydro fluoric acid (HF), mercury compounds, arsenic compounds, cyanides, etc.?</label>
+                    <div class="radio">
+                        <div class="radio-item">
+                            <label>
+                                <input type="radio" data-value=true name="radio1">
+                                true
+                            </label>
+                        </div>
+                        <div class="radio-item">
+                            <label>
+                                <input type="radio" data-value=false name="radio1">
+                                false
+                            </label>
+                        </div>
+                    </div>
+                </div>
+                <div class=" md-2 col-md-12 mb-3">
+                    <label class="address-inp">If yes, list the name of the materials with quantities.</label>
+                    <textarea class="form-control"  rows="3"></textarea>
+                </div>
+            </div>
+            <div class="form-row  two-element">
+                <div class="col-md-12 mb-3">
+                    <label class="address-inp">Does the facility use or generate carcinogenic materials such as benzene, carbon tetrachloride, vinyl chloride, hydrazine, PCBs (Polychlorinated biphenyls), etc?</label>
+                    <div class="radio">
+                        <div class="radio-item">
+                            <label>
+                                <input type="radio" data-value=true name="radio1">
+                                true
+                            </label>
+                        </div>
+                        <div class="radio-item">
+                            <label>
+                                <input type="radio" data-value=false name="radio1">
+                                false
+                            </label>
+                        </div>
+                    </div>
+                </div>
+                <div class=" md-2 col-md-12 mb-3">
+                    <label class="address-inp">If yes, list the name of the materials with quantities.</label>
+                    <textarea class="form-control"  rows="3"></textarea>
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="col-md-12 mb-3">
+                    <label class="address-inp">Hazardous Substance/ Constituent </label>
+                    <input type="text" name="Hazardous" class="form-control">
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="col-md-12 mb-3">
+                    <label class="address-inp">Physical Properties</label>
+                    <input type="text" name="PhysicalProperties" class="form-control">
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="col-md-12 mb-3">
+                    <label class="address-inp">Hazardous Material Classification</label>
+                    <input type="text" name="MaterialClassification" class="form-control">
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="col-md-12 mb-3">
+                    <label class="address-inp">Process/ Unit Used</label>
+                    <input type="number" name="MaterialClassification" class="form-control">
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="col-md-12 mb-3">
+                    <label class="address-inp">Max.Storage Quantityspan<span class="text-muted">(kg)</span></label>
+                    <input type="number" name="MaxStorage" class="form-control">
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="col-md-12 mb-3">
+                    <label class="address-inp">Delivery/ Storage Method</label>
+                    <input type="number" name="DeliveryStorage" class="form-control">
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="col-md-12 mb-3">
+                    <label class="address-inp">Surplus Disposal Method</label>
+                    <input type="number" name="SurplusDisposal" class="form-control">
+                </div>
+            </div>
+        </form>
 
         <div class="btns d-flex justify-content-between">
             <button class="btn btn-secondary" id="prev">Previous</button>
@@ -595,7 +712,7 @@
 
 
 
-
+<!-- 
     <script>
 
         // speed script for switch slide 
@@ -603,7 +720,7 @@
         // shortcat call by Id 
         let $ = (element) => document.getElementById(element);
 
-        const forms = [$('EnvForm'), $('container-form')];
+        const forms = [$('EnvForm'), $('container-form'), $('HazardousMaterialsForm')];
         let current = 0;
 
 
@@ -629,7 +746,7 @@
         }
 
     </script>
-
+ -->
 
 
 
