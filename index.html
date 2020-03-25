@@ -71,7 +71,7 @@
 
     <div class="container mb-5">
             <!-- first slide  -->
-            <form name="FacilityInformation" id="Facility_Information"  class="form_group">
+            <form name="EnvForm" id="EnvForm"  class="form_group d-none">
             <div class="form-row">
                 <div class="col-md-12 mb-3">
                     <label class="address-inp">Name</label>
@@ -450,9 +450,12 @@
             </form>
 
             <!-- second slide  -->
-            <form name="RawMaterial" id="RawMaterial" class="form_group d-none">
+            <form name="rawMForm" id="rawMForm" class="form_group">
                 <div class="form-row">
-                    <h4 class="mb-5">Raw Materials :</h4>
+                    <div class="header-address">
+                        <h4>Raw Materials :</h4>
+                        <button class="btn btn-primary">New Material</button>
+                    </div>
                     <div class="col-md-12 mb-3">
                         <label class="address-inp">Raw Material/Feedstock </label>
                         <input type="text" name="RawMaterial" class="form-control">
@@ -505,7 +508,7 @@
         // shortcat call by Id 
         let $ = (element) => document.getElementById(element);
 
-        const  forms = [ $('Facility_Information') , $('RawMaterial')];
+        const  forms = [ $('EnvForm') , $('rawMForm')];
         let current = 0 ;
 
         

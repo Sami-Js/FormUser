@@ -27,6 +27,22 @@ form {
   padding: 10px 20px;
 }
 
+.header-address {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding-bottom: 2rem;
+  margin-bottom: 2rem;
+  border-bottom: 1px solid #f7f7f7;
+}
+
 .address-inp {
   color: #3a7ecc;
   font-weight: bold;

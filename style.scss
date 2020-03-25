@@ -30,6 +30,15 @@ form{
     padding: 10px 20px ;
 }
 
+.header-address{
+    width: 100% ;
+    display: flex;
+    justify-content: space-between;
+    align-items: center ;
+    padding-bottom: 2rem ;
+    margin-bottom: 2rem ;
+    border-bottom: 1px solid #f7f7f7;
+}
 
 
 .address-inp{
