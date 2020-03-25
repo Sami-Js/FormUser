@@ -60,16 +60,13 @@ function postData(path, body) {
     }
     var tempArr = []
     var temp = new Object()
-    var count=0
     for (var [key, value] of data.entries()){
-        count++
-        temp[key] = value
         if (key == "empty")
         {
-            count = 0
             tempArr.push(temp)
             temp = new Object()
         }
+        temp[key] = value
         console.log(key, value)
     }
     jsonData = {"noise": tempArr}
