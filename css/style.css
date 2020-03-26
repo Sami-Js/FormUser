@@ -1,4 +1,4 @@
-.flex, .box-pagination {
+.flex {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -7,12 +7,51 @@
           justify-content: center;
 }
 
-.pagination {
-  padding: 30px 0;
+.box-pagination {
+  width: 100%;
 }
 
-form {
+.box-pagination .pagination {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  border-bottom: 1px solid #f7f7ff;
+  cursor: none;
+  font-size: 14px;
+}
+
+.box-pagination .pagination > * {
+  padding: 20px 10px 20px 20px;
+  color: #AAA;
+  background-color: #f7f7f7;
+  list-style: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.box-pagination .pagination .active {
+  border-bottom: 3px solid #252629;
+  color: #fafafa;
+  background-color: #006eff;
+  font-weight: bold;
+}
+
+h4 {
+  font-weight: bold;
+  font-size: 1.1rem;
+}
+
+.main-content .container {
   border: 1px solid #e8e8e8;
+  margin-top: 10rem;
+  padding: 0 !important;
 }
 
 .two-element {
@@ -43,13 +82,25 @@ form {
   border-bottom: 1px solid #f7f7f7;
 }
 
+.radio {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.radio .radio-item:nth-child(2) {
+  margin-left: 20px;
+}
+
 .address-inp {
   color: #3a7ecc;
   font-weight: bold;
 }
 
 .btns {
-  background-color: #f7f7f7;
+  padding: 30px 20px;
+  border: 1px solid #f7f7f7;
+  margin-top: 50px;
 }
 
 .btns .btn {
@@ -66,11 +117,6 @@ form {
 
 .nav-link {
   color: white;
-}
-
-.box-pagination {
-  width: 100%;
-  margin: 5rem 0 1rem;
 }
 
 .card-header {

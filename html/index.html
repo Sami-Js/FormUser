@@ -1,0 +1,1198 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/style.css">
+    <title>FormUser</title>
+</head>
+
+<body>
+
+
+    <header class="section-header">
+        <nav class="navbar navbar-dark bg-dark fixed-top">
+            <a href="#" class="navbar-brand">GET DATA</a>
+            <ul class="nav">
+                <li class="nav-item">
+                    <a class="nav-link" href="/html/get.html">
+                        <i class="fas fa-user"></i>
+                        GET Page
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/html/index.html">
+                        <i class="fas fa-user-plus"></i>
+                        POST Page
+                    </a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="main-content">
+        <div class="container mb-5">
+            <!-------------------------------       Pagination                ------------------------------------>
+            <div class="box-pagination">
+                <ul class="pagination">
+                    <li class="page active">Facility Information</li>
+                    <li class="page">Raw Materials/Products</li>
+                    <li class="page">Hazardous Materials</li>
+                    <li class="page">Fuels/Air Emissions </li>
+                    <li class="page">Fugitive Emissions</li>
+                    <li class="page">Effluent/ Wastewater</li>
+                    <li class="page">Noise/Flare</li>
+                    <li class="page">Other Information</li>
+                </ul>
+            </div>
+            <!-- first slide  -->
+            <form name="EnvForm" id="EnvForm" class="form_group d-none">
+                <div class="col-md-12 mb-3">
+                    <label class="address-inp">Name</label>
+                    <input type="text" name="name" class="form-control">
+                </div>
+                <div class=" md-2 col-md-12 mb-3">
+                    <label class="address-inp">Date</label>
+                    <input type="text" name="date" class="form-control validation0disables" disabled>
+                </div>
+                <div class="col-md-12 mb-3">
+                    <label class="address-inp">liceneType</label>
+                    <div class="radio">
+                        <div class="radio-item" name="liceneType">
+                            <label>
+                                <input type="radio" data-value=false name="licenseType">
+                                0
+                            </label>
+                        </div>
+                        <div class="radio-item">
+                            <label>
+                                <input type="radio" data-value=true name="licenseType">
+                                1
+                            </label>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-12 mb-3">
+                    <label class="address-inp">Q1A : "Brief proposed process / technology description. Please submit a
+                        two page summary explaining the process / technology in brief starting from raw material until
+                        final product is obtained including all potential pollution sources and their control
+                        measures.</label>
+                    <textarea class="form-control" name="q1A" rows="3"></textarea>
+                </div>
+                <div class=" md-2 col-md-12 mb-3" name="Q1B">
+                    <label class="address-inp">Q1B : Process flow or block flow diagram showing all raw materials and
+                        auxiliaries used, water consumption per process,wastewater generation, emission points as well
+                        as solid and hazardous waste generation"</label>
+                    <textarea class="form-control" name="q1B" rows="3"></textarea>
+                </div>
+                <div class="form-row two-element">
+                    <div class="col-md-12 mb-3">
+                        <label class="address-inp">Q1C : "Does the promoter have finalized the technology supplier for
+                            their
+                            project?"</label>
+                        <div class="radio">
+                            <div class="radio-item" name="Q1C">
+                                <label>
+                                    <input data-value=true type="radio" name="q1C">
+                                    true
+                                </label>
+                            </div>
+                            <div class="radio-item">
+                                <label>
+                                    <input data-value=false type="radio" name="q1C">
+                                    false
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class=" md-2 col-md-12 mb-3">
+                        <label class="address-inp">Q1D: if Yes, provide the name and address of the technology
+                            supplier(s)</label>
+                        <textarea class="form-control" name="q1D" rows="3"></textarea>
+                    </div>
+                </div>
+                <div class="col-md-12 mb-3">
+                    <label class="address-inp">Q1E : Does the plant use any technology that has not been used
+                        elsewhere?</label>
+                    <div class="radio">
+                        <div class="radio-item" name="Q1E">
+                            <label>
+                                <input type="radio" data-value=true name="q1E">
+                                true
+                            </label>
+                        </div>
+                        <div class="radio-item">
+                            <label>
+                                <input type="radio" data-value=false name="q1E">
+                                false
+                            </label>
+                        </div>
+                    </div>
+                </div>
+                <div class=" md-2 col-md-12 mb-3">
+                    <label class="address-inp">Q1F : How many similar plants are currently operating in Saudi Arabia or
+                        in other parts of the world using the same technology that is being planned in the industrial
+                        city?"</label>
+                    <input type="text" name="q1F" class="form-control">
+                </div>
+                <div class="form-row two-element">
+                    <div class="col-md-12 mb-3">
+                        <label class="address-inp">Q1G : "Does the facility operation involve bulk material handling of
+                            raw
+                            materials or products which are fine powder in nature?"</label>
+                        <div class="radio">
+                            <div class="radio-item" name="Q1G">
+                                <label>
+                                    <input type="radio" data-value=true name="q1G">
+                                    true
+                                </label>
+                            </div>
+                            <div class="radio-item">
+                                <label>
+                                    <input type="radio" data-value=false name="q1G">
+                                    false
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class=" md-2 col-md-12 mb-3">
+                        <label class="address-inp">Q1G1: "If yes, provide estimated quantities of such
+                            materials"</label>
+                        <textarea class="form-control" name="q1G1" rows="3"></textarea>
+                    </div>
+                </div>
+                <div class="form-row two-element">
+                    <div class="col-md-12 mb-3">
+                        <label class="address-inp">Q1H : "Does the facility operation involve trucking of
+                            solid/liquid/waste
+                            materials or raw materials or products?"</label>
+                        <div class="radio">
+                            <div class="radio-item" name="Q1H">
+                                <label>
+                                    <input type="radio" data-value="true" name="q1h">
+                                    true
+                                </label>
+                            </div>
+                            <div class="radio-item">
+                                <label>
+                                    <input type="radio" data-value="false" name="q1h">
+                                    false
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class=" md-2 col-md-12 mb-3">
+                        <label class="address-inp">Q1H1 : "If yes, provide estimated number of trucks that will be
+                            employed
+                            per day"</label>
+                        <textarea class="form-control" name="q1h1" rows="3"></textarea>
+                    </div>
+                </div>
+                <div class="form-row two-element">
+                    <div class="col-md-12 mb-3">
+                        <label class="address-inp">Q5A : Does the facility use or generate any radio
+                            active materials?</label>
+                        <div class="radio">
+                            <div class="radio-item" name="Q5A">
+                                <label>
+                                    <input type="radio" data-value="true" name="q5A">
+                                    true
+                                </label>
+                            </div>
+                            <div class="radio-item">
+                                <label>
+                                    <input type="radio" data-value="false" name="q5A">
+                                    false
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class=" md-2 col-md-12 mb-3">
+                        <label class="address-inp">Q5A1 : If yes, provide details of type and
+                            quantities of such materials.</label>
+                        <textarea class="form-control" name="q5A1" rows="3"></textarea>
+                    </div>
+                </div>
+                <div class="form-row two-element">
+                    <div class="col-md-12 mb-3">
+                        <label class="address-inp">Q5B : Does the facility use or generate highly
+                            toxic materials such as methyl isocyanate, phosgene, hydro fluoric acid (HF),
+                            mercury compounds, arsenic compounds, cyanides, etc.?</label>
+                        <div class="radio">
+                            <div class="radio-item" name="Q5B">
+                                <label>
+                                    <input type="radio" data-value="true" name="q5B">
+                                    true
+                                </label>
+                            </div>
+                            <div class="radio-item">
+                                <label>q5B
+                                    <input type="radio" data-value="false" name="q5B">
+                                    false
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class=" md-2 col-md-12 mb-3">
+                        <label class="address-inp">Q5B1 : If yes, list the name of the materials with
+                            quantities.</label>
+                        <textarea class="form-control" name="q5B1" rows="3"></textarea>
+                    </div>
+                </div>
+                <div class="form-row two-element">
+                    <div class="col-md-12 mb-3">
+                        <label class="address-inp">Q5C : Does the facility use or generate carcinogenic materials such
+                            as
+                            benzene, carbon tetrachloride, vinyl chloride, hydrazine, PCBs(Polychlorinated biphenyls),
+                            etc?</label>
+                        <div class="radio">
+                            <div class="radio-item" name="Q5C">
+                                <label>
+                                    <input type="radio" data-value="true" name="q5C">
+                                    true
+                                </label>
+                            </div>
+                            <div class="radio-item">
+                                <label>
+                                    <input type="radio" data-value="false" name="q5C">
+                                    false
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class=" md-2 col-md-12 mb-3">
+                        <label class="address-inp">Q5C1 : If yes, list the name of the materials with
+                            quantities.</label>
+                        <textarea class="form-control" name="q5C1" rows="3"></textarea>
+                    </div>
+                </div>
+                <div class="col-md-12 mb-3">
+                    <label class="address-inp">q10A</label>
+                    <div class="radio">
+                        <div class="radio-item" name="q10A">
+                            <label>
+                                <input type="radio" data-value="true" name="q10A">
+                                true
+                            </label>
+                        </div>
+                        <div class="radio-item">
+                            <label>
+                                <input type="radio" data-value="false" name="q10A">
+                                false
+                            </label>
+                        </div>
+                    </div>
+                </div>
+                <div class=" md-2 col-md-12 mb-3">
+                    <label class="address-inp">q7A : Are there any point sources that have potential to emit
+                        more than 100 tons/year (before the use of abatement equipment) of any air
+                        pollutant listed in Table 2A of RCER-2010, Volume I?</label>
+                    <div class="radio">
+                        <div class="radio-item" name="q7A">
+                            <label>
+                                <input type="radio" data-value="true" name="q7A">
+                                true
+                            </label>
+                        </div>
+                        <div class="radio-item">
+                            <label>
+                                <input type="radio" data-value="false" name="q7A">
+                                false
+                            </label>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="col-md-12 mb-3">
+                        <label class="address-inp">q7B</label>
+                        <div class="radio">
+                            <div class="radio-item" name="q7B">
+                                <label>
+                                    <input type="radio" data-value="true" name="q7B">
+                                    true
+                                </label>
+                            </div>
+                            <div class="radio-item">
+                                <label>
+                                    <input type="radio" data-value="false" name="q7B">
+                                    false
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class=" md-2 col-md-12 mb-3">
+                        <label class="address-inp">q7C : Are there any point sources that have potential to
+                            emit more than 10 tons/year (before the use of abatement equipment) of any
+                            hazardous air pollutant listed in Table 2C of RCER-2010, Volume I?</label>
+                        <div class="radio">
+                            <div class="radio-item" name="q7C">
+                                <label>
+                                    <input type="radio" data-value="true" name="q7C">
+                                    true
+                                </label>
+                            </div>
+                            <div class="radio-item">
+                                <label>
+                                    <input type="radio" data-value="false" name="q7C">
+                                    false
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="col-md-12 mb-3">
+                        <label class="address-inp">q15A:Is there loading/unloading of material containing “Volatile
+                            Organic Compounds” (VOCs) or “Hazardous Air Pollutants” (HAPs) at the FACILITY? </label>
+                        <div class="radio">
+                            <div class="radio-item" name="q15A">
+                                <label>
+                                    <input type="radio" data-value="true" name="q15A">
+                                    true
+                                </label>
+                            </div>
+                            <div class="radio-item">
+                                <label>
+                                    <input type="radio" data-value="false" name="q15A">
+                                    false
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class=" md-2 col-md-12 mb-3">
+                        <label class="address-inp">q15B: Is there loading/unloading of material containing
+                            “Volatile Organic Compounds” (VOCs) or “Hazardous Air Pollutants” (HAPs) at the
+                            PORT?</label>
+                        <div class="radio">
+                            <div class="radio-item" name="q15B">
+                                <label>
+                                    <input type="radio" data-value="true" name="q15B">
+                                    true
+                                </label>
+                            </div>
+                            <div class="radio-item">
+                                <label>
+                                    <input type="radio" data-value="false" name="q15B">
+                                    false
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="col-md-12 mb-3">
+                        <label class="address-inp">q15C: Is there loading/unloading of material that emit “Dust”
+                            or “Suspended Particulates” at the
+                            FACILITY? </label>
+                        <div class="radio">
+                            <div class="radio-item" name="q15C">
+                                <label>
+                                    <input type="radio" data-value="true" name="q15C">
+                                    true
+                                </label>
+                            </div>
+                            <div class="radio-item">
+                                <label>
+                                    <input type="radio" data-value="false" name="q15C">
+                                    false
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class=" md-2 col-md-12 mb-3">
+                        <label class="address-inp">q15D : Is there loading/unloading of material that emit “Dust”
+                            or “Suspended Particulates” at the PORT?</label>
+                        <div class="radio">
+                            <div class="radio-item" name="q15D">
+                                <label>
+                                    <input type="radio" data-value="true" name="radio1">
+                                    true
+                                </label>
+                            </div>
+                            <div class="radio-item">
+                                <label>
+                                    <input type="radio" data-value="false" name="radio1">
+                                    false
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </form>
+
+            <!-- second slide  -->
+            <div id="container-form-1" class="form_group d-none">
+                <form name="rawMForm" id="rawMForm">
+                    <div class="header-address">
+                        <h4>Raw Materials :</h4>
+                        <button class="btn btn-primary">New Material</button>
+                    </div>
+                    <div class="col-md-12 mb-3">
+                        <label class="address-inp">Raw Material/Feedstock </label>
+                        <input type="text" name="materialF" class="form-control">
+                    </div>
+                    <div class=" md-2 col-md-12 mb-3">
+                        <label class="address-inp">Process</label>
+                        <input type="text" name="process" class="form-control">
+                    </div>
+                    <div class="col-md-12 mb-3">
+                        <label class="address-inp">Delivery Method</label>
+                        <input type="text" name="deliveryMethod" class="form-control">
+                    </div>
+                    <div class="col-md-12 mb-3">
+                        <label class="address-inp">Storage Method</label>
+                        <input type="text" name="storageMethod" class="form-control">
+                    </div>
+                    <div class=" md-2 col-md-12 mb-3">
+                        <label class="address-inp">On-Site Storage Quantity</label>
+                        <input type="text" name="onSiteStorageQuantity" class="form-control">
+                    </div>
+                    <div class="col-md-12 mb-3">
+                        <label class="address-inp">Max.Hourly Consumption <span class="text-muted">(unit)</span></label>
+                        <input type="number" name="maxHourlyConsumption" class="form-control">
+                    </div>
+                    <div class=" md-2 col-md-12 mb-3">
+                        <label class="address-inp">Annual Consumption<span class="text-muted">(unit)</span></label>
+                        <input type="number" name="annualConsumption" class="form-control">
+                    </div>
+                    <!--------------------------            Here input empty        ------------------------------------ -->
+                    <input type="hidden" name="empty">
+                </form>
+                <form id="auxForm" name="auxForm">
+                    <div class="header-address">
+                        <h4>Other Materials/ Auxiliaries Used:</h4>
+                        <button class="btn btn-primary">New Auxiliaries</button>
+                    </div>
+                    <div class="col-md-12 mb-3">
+                        <label class="address-inp">Material</label>
+                        <input type="text" name="aMaterialF" class="form-control">
+                    </div>
+                    <div class=" md-2 col-md-12 mb-3">
+                        <label class="address-inp">Process</label>
+                        <input type="text" name="aProcess" class="form-control">
+                    </div>
+                    <div class="col-md-12 mb-3">
+                        <label class="address-inp">Delivery Method</label>
+                        <input type="text" name="aDeliveryMethod" class="form-control">
+                    </div>
+                    <div class="col-md-12 mb-3">
+                        <label class="address-inp">Storage Method</label>
+                        <input type="text" name="aStorageMethod" class="form-control">
+                    </div>
+                    <div class=" md-2 col-md-12 mb-3">
+                        <label class="address-inp">On-Site Storage Quantity</label>
+                        <input type="text" name="aOnSiteStorageQuantity" class="form-control">
+                    </div>
+                    <div class="col-md-12 mb-3">
+                        <label class="address-inp">Max.Hourly Consumption <span class="text-muted">(unit)</span></label>
+                        <input type="number" name="aMaxHourlyConsumption" class="form-control">
+                    </div>
+                    <div class=" md-2 col-md-12 mb-3">
+                        <label class="address-inp">Annual Consumption<span class="text-muted">(unit)</span></label>
+                        <input type="number" name="aAnnualConsumption" class="form-control">
+                    </div>
+                    <!--------------------------            Here input empty        ------------------------------------ -->
+                    <input type="hidden" name="empty">
+                </form>
+                <form name="ProductsForm" id="ProductsForm">
+                    <div class="header-address">
+                        <h4>Products:</h4>
+                        <button class="btn btn-primary">New Product</button>
+                    </div>
+                    <div class=" md-2 col-md-12 mb-3">
+                        <label class="address-inp">Process</label>
+                        <input type="text" name="process" class="form-control">
+                    </div>
+                    <div class=" md-2 col-md-12 mb-3">
+                        <label class="address-inp">Product By product</label>
+                        <input type="text" name="productByProduct" class="form-control">
+                    </div>
+                    <div class="col-md-12 mb-3">
+                        <label class="address-inp">Delivery Method</label>
+                        <input type="text" name="maxHourlyProduction" class="form-control">
+                    </div>
+                    <div class="col-md-12 mb-3">
+                        <label class="address-inp">Storage Method</label>
+                        <input type="text" name="annualProduction" class="form-control">
+                    </div>
+                    <div class=" md-2 col-md-12 mb-3">
+                        <label class="address-inp">On-Site Storage Quantity</label>
+                        <input type="text" name="storageDeliveryMethod" class="form-control">
+                    </div>
+                    <div class="col-md-12 mb-3">
+                        <label class="address-inp">Max.Hourly Consumption <span class="text-muted">(unit)</span></label>
+                        <input type="number" name="maximumStorageCapacity" class="form-control">
+                    </div>
+                    <!--------------------------            Here input empty        ------------------------------------ -->
+                    <input type="hidden" name="empty">
+                </form>
+            </div>
+
+            <!-- third slide -->
+            <form name="HazardousMaterialsForm" id="HazardousMaterialsForm" class="form_group d-none">
+                <div class="header-address pt-5 pl-4">
+                    <h4>Hazardous Materials :</h4>
+                </div>
+                <div class="col-md-12 mb-3">
+                    <label class="address-inp">Hazardous Substance/ Constituent </label>
+                    <input type="text" name="hazardousSubstance" class="form-control">
+                </div>
+                <div class="col-md-12 mb-3">
+                    <label class="address-inp">Physical Properties</label>
+                    <input type="text" name="physicalProperties" class="form-control">
+                </div>
+                <div class="col-md-12 mb-3">
+                    <label class="address-inp">Hazardous Material Classification</label>
+                    <input type="text" name="hazardousMaterialClassification1" class="form-control">
+                </div>
+                <div class="col-md-12 mb-3">
+                    <label class="address-inp">Process/ Unit Used</label>
+                    <input type="number" name="processUnitUsed" class="form-control">
+                </div>
+                <div class="col-md-12 mb-3">
+                    <label class="address-inp">Max.Storage Quantityspan<span class="text-muted">(kg)</span></label>
+                    <input type="number" name="maxStorageQuantity" class="form-control">
+                </div>
+                <div class="col-md-12 mb-3">
+                    <label class="address-inp">Delivery/ Storage Method</label>
+                    <input type="number" name="deliveryStorageMethod" class="form-control">
+                </div>
+                <div class="col-md-12 mb-3">
+                    <label class="address-inp">Surplus Disposal Method</label>
+                    <input type="number" name="surplusDisposalMethod" class="form-control">
+                </div>
+            </form>
+
+            <!-- fourth slide -->
+            <div id="container-form-2" class="from_group d-none">
+                <form name="FuelsForm" id="FuelsForm">
+                    <div class="header-address">
+                        <h4>Fuels:</h4>
+                    </div>
+                    <div class="col-md-12 mb-3">
+                        <label class="address-inp">Process</label>
+                        <input type="text" name="process" class="form-control">
+                    </div>
+                    <div class=" md-2 col-md-12 mb-3">
+                        <label class="address-inp">Fuel Type with Composition </label>
+                        <input type="text" name="fuelType" class="form-control">
+                    </div>
+                    <div class="col-md-12 mb-3">
+                        <label class="address-inp">Fuel Consumption
+                            <span class="text-muted">(unit)</span>
+                        </label>
+                        <input type="number" name="fuelConsumption" class="form-control">
+                    </div>
+                    <div class="form-row  two-element">
+                        <div class="col-md-12 mb-3">
+                            <label class="address-inp">Alternative Fuels Used? </label>
+                            <div class="radio">
+                                <div class="radio-item">
+                                    <label>
+                                        <input type="radio" data-value=true name="alternativeFuelsUsed">
+                                        true
+                                    </label>
+                                </div>
+                                <div class="radio-item">
+                                    <label>
+                                        <input type="radio" data-value=false name="alternativeFuelsUsed">
+                                        false
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class=" md-2 col-md-12 mb-3">
+                            <label class="address-inp">If yes, please specify type </label>
+                            <textarea class="form-control" name="provideAlternativeFuels" rows="3"></textarea>
+                        </div>
+                    </div>
+                    <!--------------------------            Here input empty        ------------------------------------ -->
+                    <input type="hidden" name="empty">
+                </form>
+                <form name="AirEmissionsPointSourcesForm" id="AirEmissionsPointSourcesForm">
+                    <div class="header-address">
+                        <h4>Air Emissions :</h4>
+                    </div>
+                    <div class="form-row">
+                        <div class="col-md-12 mb-3">
+                            <label class="address-inp">Source</label>
+                            <textarea class="form-control" name="source" rows="3"></textarea>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="col-md-12 mb-3">
+                            <label class="address-inp">Unit ID</label>
+                            <input type="text" name="unitID" class="form-control">
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="col-md-12 mb-3">
+                            <label class="address-inp">Pollutant</label>
+                            <input type="text" name="pollutant" class="form-control">
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="col-md-12 mb-3">
+                            <label class="address-inp">Pollutant Concentration
+                                <span class="text-muted">(unit)2</span>
+                            </label>
+                            <input type="number" name="pollutantConcentration" class="form-control">
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="col-md-12 mb-3">
+                            <label class="address-inp">Emission Rate
+                                <span class="text-muted">(kg/hr)</span>
+                            </label>
+                            <input type="number" name="emissionRate" class="form-control">
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="col-md-12 mb-3">
+                            <label class="address-inp">Emission Height <span class="text-muted">(m)</span></label>
+                            <input type="number" name="emissionHeight" class="form-control">
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="col-md-12 mb-3">
+                            <label class="address-inp">Emission
+                                Control
+                                Method/ Efficiency </label>
+                            <input type="text" name="emissionControl" class="form-control">
+                        </div>
+                    </div>
+                    <!--------------------------            Here input empty        ------------------------------------ -->
+                    <input type="hidden" name="empty">
+                </form>
+            </div>
+
+            <!-- 5th slide -->
+            <div id="container-form-3" class="from_group d-none">
+                <form name="FugitiveAirEmissionsForm" id="FugitiveAirEmissionsForm">
+                    <div class="header-address">
+                        <h4> Fugitive Air Emissions:</h4>
+                    </div>
+                    <div class="col-md-12 mb-3">
+                        <label class="address-inp">VOC/ HAP Source <span class="text-muted"> (Name & Number)
+                            </span></label>
+                        <div class="row">
+                            <div class="col">
+                                <input type="text" class="form-control" placeholder="Name" name="vochapSource3Name">
+                            </div>
+                            <div class="col">
+                                <input type="number" class="form-control" placeholder="number"
+                                    name="vochapSource3Number">
+                            </div>
+                        </div>
+                    </div>
+                    <div class=" md-2 col-md-12 mb-3">
+                        <label class="address-inp">Component </label>
+                        <input type="text" name="component" class="form-control">
+                    </div>
+                    <div class="col-md-12 mb-3">
+                        <label class="address-inp">Uncontrolled Emission <span class="text-muted">(kg/h)</span>
+                        </label>
+                        <input type="number" name="uncontrolledEmission" class="form-control">
+                    </div>
+                    <div class="col-md-12 mb-3">
+                        <label class="address-inp">Control Efficiency <span class="text-muted">(%)</span>
+                        </label>
+                        <input type="number" name="controlEfficiency" class="form-control">
+                    </div>
+                    <div class="col-md-12 mb-3">
+                        <label class="address-inp">Controlled
+                            Emissions
+                            <span class="text-muted">(kg/h)</span>
+                        </label>
+                        <input type="number" name="controlledEmissions" class="form-control">
+                    </div>
+                    <!--------------------------            Here input empty        ------------------------------------ -->
+                    <input type="hidden" name="empty">
+                </form>
+                <form name="WaterConsumptionForm" id="WaterConsumptionForm">
+                    <div class="header-address">
+                        <h4>Water Consumption :</h4>
+                    </div>
+                    <div class=" md-2 col-md-12 mb-3">
+                        <label class="address-inp">Process</label>
+                        <input type="text" name="process" class="form-control">
+                    </div>
+                    <div class=" md-2 col-md-12 mb-3">
+                        <label class="address-inp">Average
+                            Consumption <span class="text-muted">(m&sup3;/hr)</span>
+                        </label>
+                        <input type="number" name="averageConsumption" class="form-control">
+                    </div>
+                    <div class=" md-2 col-md-12 mb-3">
+                        <label class="address-inp">Maximum Consumption
+                            <span class="text-muted">(m&sup3;/hr)</span>
+                        </label>
+                        <input type="number" name="maximumConsumption" class="form-control">
+                    </div>
+                    <div class="form-row  two-element">
+                        <div class="col-md-12 mb-3">
+                            <label class="address-inp">Treatment Required ?</label>
+                            <div class="radio">
+                                <div class="radio-item">
+                                    <label>
+                                        <input type="radio" data-value=true name="isTreatmentRequired">
+                                        true
+                                    </label>
+                                </div>
+                                <div class="radio-item">
+                                    <label>
+                                        <input type="radio" data-value=false name="isTreatmentRequired">
+                                        false
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class=" md-2 col-md-12 mb-3">
+                            <label class="address-inp">If yes, please specify
+                                type of treatment
+                            </label>
+                            <textarea name="treatmentRequiredList" class="form-control" rows="3"></textarea>
+                        </div>
+                    </div>
+                    <!--------------------------            Here input empty      ------------------------------------ -->
+                    <input type="hidden" name="empty">
+                </form>
+            </div>
+            <!--------     6th slide     ------->
+            <div id="container-form-4" class="from_group">
+                <form name="EffluentWastewaterForm" id="EffluentWastewaterForm">
+                    <div class="header-address">
+                        <h4>Effluent/ Wastewater Discharges:</h4>
+                    </div>
+                    <div class="col-md-12 mb-3">
+                        <label class="address-inp">Source
+                        </label>
+                        <input type="text" class="form-control" name="source">
+                    </div>
+                    <div class=" md-2 col-md-12 mb-3">
+                        <label class="address-inp">Discharge Flow Rate
+                            <span class="text-muted">(Ave)</span>
+                        </label>
+                        <input type="number" name="dischargeFlow" class="form-control">
+                    </div>
+                    <div class="col-md-12 mb-3">
+                        <label class="address-inp">Temp <span class="text-muted">(&deg;C)</span>
+                        </label>
+                        <input type="number" name="temp" class="form-control">
+                    </div>
+                    <div class="col-md-12 mb-3">
+                        <label class="address-inp">pH
+                        </label>
+                        <input type="number" name="ph" class="form-control">
+                    </div>
+                    <div class="col-md-12 mb-3">
+                        <label class="address-inp">TDC
+                        </label>
+                        <input type="number" name="tds" class="form-control">
+                    </div>
+                    <div class="col-md-12 mb-3">
+                        <label class="address-inp">TOC
+                        </label>
+                        <input type="number" name="toc" class="form-control">
+                    </div>
+                    <div class="col-md-12 mb-3">
+                        <label class="address-inp">TSS
+                        </label>
+                        <input type="number" name="tss" class="form-control">
+                    </div>
+                    <div class="form-row two-element">
+                        <div class="col-md-12 mb-3">
+                            <label class="address-inp">Pre-Treatment Required?</label>
+                            <div class="radio">
+                                <div class="radio-item">
+                                    <label>
+                                        <input type="radio" data-value=true name="radio1">
+                                        true
+                                    </label>
+                                </div>
+                                <div class="radio-item">
+                                    <label>
+                                        <input type="radio" data-value=false name="radio1">
+                                        false
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class=" md-2 col-md-12 mb-3">
+                            <label class="address-inp">If yes, please specify
+                                type of pre-treatment
+                            </label>
+                            <textarea name="providePreTreatment" class="form-control" rows="3"></textarea>
+                        </div>
+                    </div>
+                    <!--------------------------            Here input empty        ------------------------------------ -->
+                    <input type="hidden" name="empty">
+                </form>
+                <form name="SolidLiquidWasteForm" id="SolidLiquidWasteForm">
+                    <div class="header-address">
+                        <h4>Solid/Liquid Waste (Hazardous and Non Hazardous) : </h4>
+                    </div>
+                    <div class="col-md-12 mb-3">
+                        <label class="address-inp">Source
+                        </label>
+                        <input type="text" class="form-control" name="source">
+                    </div>
+                    <div class=" md-2 col-md-12 mb-3">
+                        <label class="address-inp">Amount Generated <span class="text-muted">(tons/year) </span>
+                        </label>
+                        <input type="number" name="amountGenerated" class="form-control">
+                    </div>
+                    <div class="col-md-12 mb-3">
+                        <label class="address-inp">Composition
+                        </label>
+                        <input type="text" name="composition" class="form-control">
+                    </div>
+                    <div class="col-md-12 mb-3">
+                        <label class="address-inp">Maximum Storage
+                            <span class="text-muted">(tons)</span>
+                        </label>
+                        <input type="number" name="maximumStorage" class="form-control">
+                    </div>
+                    <div class="col-md-12 mb-3">
+                        <label class="address-inp">Treatment, Disposal Methods and
+                            Location
+                        </label>
+                        <input type="text" name="treatmentMethodsLocation" class="form-control">
+                    </div>
+                    <!--------------------------            Here input empty        ------------------------------------ -->
+                    <input type="hidden" name="empty">
+                </form>
+            </div>
+
+            <!--------         7th slide             ---------->
+            <!-- seventh slide -->
+            <div id="container-form-5" class="form_group d-none">
+                <!-- QUESTION 12 NOISES-->
+                <form name="NoiseForm" id="NoiseForm" class="form_group">
+                    <div class="form-row">
+                        <div class="header-address">
+                            <h4>Noise Source 1 :</h4>
+                            <button type="button" id="addNoise" class="btn btn-primary">New Noise Source</button>
+                        </div>
+                        <div class="col-md-12 mb-3">
+                            <label class="address-inp">Source </label>
+                            <input type="text" name="source" class="form-control">
+                        </div>
+                        <div class=" md-2 col-md-12 mb-3">
+                            <label class="address-inp">Noise Level Inside Premises
+                                (dBA)
+                            </label>
+                            <input type="number" name="noiseLevelInsidePremises" class="form-control">
+                        </div>
+                        <div class="col-md-12 mb-3">
+                            <label class="address-inp">Noise Level at Boundary Fence
+                                (dBA)
+                            </label>
+                            <input type="number" name="noiseLevelatBoundaryFence" class="form-control">
+                        </div>
+                        <div class="col-md-12 mb-3">
+                            <label class="address-inp">Control Methods</label>
+                            <input type="text" name="controlMethods" class="form-control">
+                        </div>
+                        <input hidden type="" name="empty">
+                    </div>
+                </form>
+
+                <!-- QUESTION 13 FLARES -->
+                <form name="FlareForm" id="FlareForm" class="form_group">
+                    <div class="form-row">
+                        <div class="header-address">
+                            <h4>Flare 1 :</h4>
+                            <button type="button" id="addFlare" class="btn btn-primary">New Flare</button>
+                        </div>
+                        <div class="col-md-12 mb-3">
+                            <label class="address-inp">Type (Elevated, Ground, Emergency, Regulated, Other Flares)
+                                Number of
+                                Flares Height of Flares (Meter) Steam Assisted/ Air Assisted</label>
+                            <input type="text" name="FlareType" class="form-control">
+                        </div>
+                        <div class=" md-2 col-md-12 mb-3">
+                            <label class="address-inp">Number of Flares
+                            </label>
+                            <input type="number" name="NumberofFlares" class="form-control">
+                        </div>
+                        <div class="col-md-12 mb-3">
+                            <label class="address-inp">Height of Flares(Meter)</label>
+                            <input type="number" name="HeightofFlares" class="form-control">
+                        </div>
+                        <div class="col-md-12 mb-3">
+                            <label class="address-inp">Steam Assisted/ Air Assisted</label>
+                            <input type="text" name="SteamAssistedAirAssisted" class="form-control">
+                        </div>
+                        <input hidden type="" name="empty">
+                    </div>
+                </form>
+
+                <!-- QUESTION 14 Incinerator -->
+                <form name="IncineratorForm" id="IncineratorForm" class="form_group">
+                    <div class="form-row">
+                        <div class="header-address">
+                            <h4>Incinerator 1 :</h4>
+                            <button type="button" id="addIncinerator" class="btn btn-primary">New Flare</button>
+                        </div>
+                        <div class="col-md-12 mb-3">
+                            <label class="address-inp">Type of Incinerator </label>
+                            <input type="text" name="TypeofIncinerator" class="form-control">
+                        </div>
+                        <div class=" md-2 col-md-12 mb-3">
+                            <label class="address-inp">Number of Incinerators</label>
+                            <input type="number" name="NumberofIncinerators" class="form-control">
+                        </div>
+                        <div class="col-md-12 mb-3">
+                            <label class="address-inp">
+                                Type of Incinerator Number of Incinerators Type of Auxiliary Fuel Used Waste to be
+                                Burnt( Provide
+                                hydrocarbon content and calorific value)</label>
+                            <input type="text" name="TypeofAuxiliaryFuelUsed" class="form-control">
+                        </div>
+                        <div class="col-md-12 mb-3">
+                            <label class="address-inp">Waste to be Burnt ( Provide hydrocarbon content and calorific
+                                value) </label>
+                            <input type="text" name="WastetobeBurnt" class="form-control">
+                        </div>
+                        <input hidden type="" name="empty">
+                    </div>
+                </form>
+            </div>
+
+            <!-- EIGHTH SLIDE -->
+            <div id="container-form-1" class="form_group d-none">
+                <!-- QUESTION 16 DREDGING -->
+                <form name="DredgingOperationsForm" id="DredgingOperationsForm" class="form_group">
+                    <div class="form-row">
+                        <div class="header-address">
+                            <h4>Dredging Operations</h4>
+                        </div>
+                        <div class="form-row two-element">
+                            <div class="col-md-12 mb-3">
+                                <label class="address-inp">Does the facility construction involve any “Dredging”
+                                    operation
+                                    ?</label>
+                                <div class="radio">
+                                    <div class="radio-item" name="Q1C">
+                                        <label>
+                                            <input data-value=true type="radio" name="q16" value=true>
+                                            Yes
+                                        </label>
+                                    </div>
+                                    <div class="radio-item">
+                                        <label>
+                                            <input data-value=false type="radio" name="q16" value=false>
+                                            No
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class=" md-2 col-md-12 mb-3">
+                                <label class="address-inp">if Yes, provide a list of the operations</label>
+                                <textarea class="form-control" name="listThem" rows="3"></textarea>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+
+                <!-- QUESTION 17 OTHER INFORMATION -->
+                <form name="DredgingOperationsForm" id="DredgingOperationsForm" class="form_group">
+                    <div class="header-address">
+                        <h4>Dredging Operations</h4>
+                    </div>
+                    <!-- QA -->
+                    <div class="form-row two-element">
+                        <div class="col-md-12 mb-3">
+                            <label class="address-inp">Vehicle maintenance on site</label>
+                            <div class="radio">
+                                <div class="radio-item" name="Q1C">
+                                    <label>
+                                        <input data-value=true type="radio" name="q17A" value=true>
+                                        Yes
+                                    </label>
+                                </div>
+                                <div class="radio-item">
+                                    <label>
+                                        <input data-value=false type="radio" name="q17A" value=false>
+                                        No
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- QB -->
+                    <div class="form-row two-element">
+                        <div class="col-md-12 mb-3">
+                            <label class="address-inp">Indoor abrasive blasting</label>
+                            <div class="radio">
+                                <div class="radio-item" name="Q1C">
+                                    <label>
+                                        <input data-value=true type="radio" name="q17B" value=true>
+                                        Yes
+                                    </label>
+                                </div>
+                                <div class="radio-item">
+                                    <label>
+                                        <input data-value=false type="radio" name="q17B" value=false>
+                                        No
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class=" md-2 col-md-12 mb-3">
+                            <label class="address-inp">If yes, provide the material used</label>
+                            <textarea class="form-control" name="bMaterialused" rows="3"></textarea>
+                        </div>
+                    </div>
+                    <!-- QC -->
+                    <div class="form-row two-element">
+                        <div class="col-md-12 mb-3">
+                            <label class="address-inp">Outdoor abrasive blasting</label>
+                            <div class="radio">
+                                <div class="radio-item" name="Q1C">
+                                    <label>
+                                        <input data-value=true type="radio" name="q17C" value=true>
+                                        Yes
+                                    </label>
+                                </div>
+                                <div class="radio-item">
+                                    <label>
+                                        <input data-value=false type="radio" name="q17C" value=false>
+                                        No
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class=" md-2 col-md-12 mb-3">
+                            <label class="address-inp">If yes, provide the material used</label>
+                            <textarea class="form-control" name="cMaterialused" rows="3"></textarea>
+                        </div>
+                    </div>
+                    <!-- QD -->
+                    <div class="form-row two-element">
+                        <div class="col-md-12 mb-3">
+                            <label class="address-inp">Underground storage tanks</label>
+                            <div class="radio">
+                                <div class="radio-item" name="Q1C">
+                                    <label>
+                                        <input data-value=true type="radio" name="q17D" value=true>
+                                        Yes
+                                    </label>
+                                </div>
+                                <div class="radio-item">
+                                    <label>
+                                        <input data-value=false type="radio" name="q17D" value=false>
+                                        No
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class=" md-2 col-md-12 mb-3">
+                            <label class="address-inp">If yes, provide type, number, capacity and material
+                                stored</label>
+                            <textarea class="form-control" name="q17D1" rows="3"></textarea>
+                        </div>
+                    </div>
+                    <!-- QE -->
+                    <div class="form-row two-element">
+                        <div class="col-md-12 mb-3">
+                            <label class="address-inp">Aboveground storage tanks</label>
+                            <div class="radio">
+                                <div class="radio-item" name="Q1C">
+                                    <label>
+                                        <input data-value=true type="radio" name="q17E" value=true>
+                                        Yes
+                                    </label>
+                                </div>
+                                <div class="radio-item">
+                                    <label>
+                                        <input data-value=false type="radio" name="q17E" value=false>
+                                        No
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class=" md-2 col-md-12 mb-3">
+                            <label class="address-inp">If yes, provide type, number, capacity and material
+                                stored</label>
+                            <textarea class="form-control" name="q17E1" rows="3"></textarea>
+                        </div>
+                    </div>
+                    <!-- QF -->
+                    <div class="form-row two-element">
+                        <div class="col-md-12 mb-3">
+                            <label class="address-inp">Painting on site</label>
+                            <div class="radio">
+                                <div class="radio-item" name="Q1C">
+                                    <label>
+                                        <input data-value=true type="radio" name="q17F" value=true>
+                                        Yes
+                                    </label>
+                                </div>
+                                <div class="radio-item">
+                                    <label>
+                                        <input data-value=false type="radio" name="q17F" value=false>
+                                        No
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- QG -->
+                    <div class="form-row two-element">
+                        <div class="col-md-12 mb-3">
+                            <label class="address-inp">Hazardous materials storage area</label>
+                            <div class="radio">
+                                <div class="radio-item" name="Q1C">
+                                    <label>
+                                        <input data-value=true type="radio" name="q17G" value=true>
+                                        Yes
+                                    </label>
+                                </div>
+                                <div class="radio-item">
+                                    <label>
+                                        <input data-value=false type="radio" name="q17G" value=false>
+                                        No
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class=" md-2 col-md-12 mb-3">
+                            <label class="address-inp">If yes, provide a sketch of the area</label>
+                            <textarea class="form-control" name="q17G1" rows="3"></textarea>
+                        </div>
+                    </div>
+                    <div class=" md-2 col-md-12 mb-3">
+                        <label class="address-inp">Additional Information</label>
+                        <textarea class="form-control" name="additionalInformation" rows="3"></textarea>
+                    </div>
+            </div>
+            </form>
+            <div class="btns d-flex justify-content-between">
+                <button class="btn btn-secondary" id="prev">Previous</button>
+                <button class="btn btn-primary" id="Next">Next</button>
+            </div>
+
+        </div>
+    </section>
+
+
+
+
+
+
+    <!-- JQuery -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <!-- Bootstrap -->
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+    <!-- Popper -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.1/popper-utils.min.js.map"></script>
+    <!-- my script -->
+    <script src="../js/index.js"></script>
+</body>
+
+</html>
