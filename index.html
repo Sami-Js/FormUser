@@ -864,7 +864,7 @@
         </div>
 
         <!-- 5th slide -->
-        <div id="container-form-3" class="from_group">
+        <div id="container-form-3" class="from_group d-none">
             <form name="FugitiveAirEmissionsForm" id="FugitiveAirEmissionsForm">
                 <div class="form-row">
                     <div class="header-address">
@@ -959,11 +959,116 @@
                         </div>
                     </div>
                     <div class=" md-2 col-md-12 mb-3">
-                        <label class="address-inp">If yes, please specify 
-                            type of treatment 
-                            </label>
+                        <label class="address-inp">If yes, please specify
+                            type of treatment
+                        </label>
                         <textarea name="treatmentRequiredList" class="form-control" rows="3"></textarea>
                     </div>
+                </div>
+                <!--------------------------            Here input empty      ------------------------------------ -->
+                <input type="hidden" name="empty">
+            </form>
+        </div>
+        <!--------     6th slide     ------->
+        <div id="container-form-4" class="from_group">
+            <form name="EffluentWastewaterForm" id="EffluentWastewaterForm">
+                <div class="header-address">
+                    <h4>Effluent/ Wastewater Discharges:</h4>
+                </div>
+                <div class="col-md-12 mb-3">
+                    <label class="address-inp">Source
+                    </label>
+                    <input type="text" class="form-control" name="source">
+                </div>
+                <div class=" md-2 col-md-12 mb-3">
+                    <label class="address-inp">Discharge Flow Rate
+                        <span class="text-muted">(Ave)</span>
+                    </label>
+                    <input type="number" name="dischargeFlow" class="form-control">
+                </div>
+                <div class="col-md-12 mb-3">
+                    <label class="address-inp">Temp <span class="text-muted">(&deg;C)</span>
+                    </label>
+                    <input type="number" name="temp" class="form-control">
+                </div>
+                <div class="col-md-12 mb-3">
+                    <label class="address-inp">pH
+                    </label>
+                    <input type="number" name="ph" class="form-control">
+                </div>
+                <div class="col-md-12 mb-3">
+                    <label class="address-inp">TDC
+                    </label>
+                    <input type="number" name="tds" class="form-control">
+                </div>
+                <div class="col-md-12 mb-3">
+                    <label class="address-inp">TOC
+                    </label>
+                    <input type="number" name="toc" class="form-control">
+                </div>
+                <div class="col-md-12 mb-3">
+                    <label class="address-inp">TSS
+                    </label>
+                    <input type="number" name="tss" class="form-control">
+                </div>
+                <div class="form-row  two-element">
+                    <div class="col-md-12 mb-3">
+                        <label class="address-inp">Pre-Treatment Required?</label>
+                        <div class="radio">
+                            <div class="radio-item">
+                                <label>
+                                    <input type="radio" data-value=true name="radio1">
+                                    true
+                                </label>
+                            </div>
+                            <div class="radio-item">
+                                <label>
+                                    <input type="radio" data-value=false name="radio1">
+                                    false
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class=" md-2 col-md-12 mb-3">
+                        <label class="address-inp">If yes, please specify
+                            type of pre-treatment
+                        </label>
+                        <textarea name="providePreTreatment" class="form-control" rows="3"></textarea>
+                    </div>
+                </div>
+                <!--------------------------            Here input empty        ------------------------------------ -->
+                <input type="hidden" name="empty">
+            </form>
+            <form name="SolidLiquidWasteForm" id="SolidLiquidWasteForm">
+                <div class="header-address">
+                    <h4>Solid/Liquid Waste (Hazardous and Non Hazardous) :  </h4>
+                </div>
+                <div class="col-md-12 mb-3">
+                    <label class="address-inp">Source
+                    </label>
+                    <input type="text" class="form-control" name="source">
+                </div>
+                <div class=" md-2 col-md-12 mb-3">
+                    <label class="address-inp">Amount Generated <span class="text-muted">(tons/year)          </span>              
+                    </label>
+                    <input type="number" name="amountGenerated" class="form-control">
+                </div>
+                <div class="col-md-12 mb-3">
+                    <label class="address-inp">Composition
+                    </label>
+                    <input type="text" name="composition" class="form-control">
+                </div>
+                <div class="col-md-12 mb-3">
+                    <label class="address-inp">Maximum Storage
+                        <span class="text-muted">(tons)</span>   
+                    </label>
+                    <input type="number" name="maximumStorage" class="form-control">
+                </div>
+                <div class="col-md-12 mb-3">
+                    <label class="address-inp">Treatment, Disposal Methods and
+                        Location
+                    </label>
+                    <input type="text" name="treatmentMethodsLocation" class="form-control">
                 </div>
                 <!--------------------------            Here input empty        ------------------------------------ -->
                 <input type="hidden" name="empty">
