@@ -9,19 +9,37 @@ let current = 0 ;
 const next = $('Next');
 const prev = $('prev');
 
+// pagination 
+const pagination = document.querySelectorAll('.pagination > *');
 
-
-function switchSlide(counter , cond){
-    if(current === cond) return ;
-    arrayElement.forEach((elm) => elm.classList.add('d-none'));
-    arrayElement[current].classList.remove('d-none');
-}
-
+console.log(current)
 next.addEventListener('click' , function (){
-    switchSlide(++current , arrayElement.length - 2  ) ;
+    if(current >= arrayElement.length - 1) return ;
+    arrayElement.forEach((elm) => elm.classList.add('d-none'));
+
+    pagination.forEach((elm) => elm.classList.remove('active'));
+
+    let currentCount = ++current ;
+
+    arrayElement[currentCount].classList.remove('d-none');
+    pagination[currentCount].classList.add('active');
+
+    window.scrollTo(0 , 0)
+    
 })
-prev.addEventListener('click' , function () {
-    switchSlide(--current , 1 );
+
+prev.addEventListener('click' , function (){
+    if(current <= 0 ) return ;
+    arrayElement.forEach((elm) => elm.classList.add('d-none'));
+    pagination.forEach((elm) => elm.classList.remove('active'));
+
+    let currentCount = --current ;
+    
+    arrayElement[currentCount].classList.remove('d-none');
+    pagination[currentCount].classList.add('active');
+
+    window.scrollTo(0 , 0)
+
 })
 
 
