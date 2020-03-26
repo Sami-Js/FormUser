@@ -707,7 +707,7 @@
         </form>
 
         <!-- fourth slide -->
-        <div id="container-form-2" class="from_group">
+        <div id="container-form-2" class="from_group d-none">
             <form name="FuelsForm" id="FuelsForm">
                 <div class="form-row">
                     <div class="header-address">
@@ -830,9 +830,9 @@
                 </div>
                 <div class="form-row">
                     <div class="col-md-12 mb-3">
-                        <label class="address-inp">Pollutant Concentration 
+                        <label class="address-inp">Pollutant Concentration
                             <span class="text-muted">(unit)2</span>
-                            </label>
+                        </label>
                         <input type="number" name="Pollutant2" class="form-control">
                     </div>
                 </div>
@@ -840,22 +840,129 @@
                     <div class="col-md-12 mb-3">
                         <label class="address-inp">Emission Rate
                             <span class="text-muted">(kg/hr)</span>
-                            </label>
+                        </label>
                         <input type="number" name="EmissionRate" class="form-control">
                     </div>
                 </div>
                 <div class="form-row">
                     <div class="col-md-12 mb-3">
-                        <label class="address-inp">Emission  Height <span class="text-muted">(m)</span></label>
+                        <label class="address-inp">Emission Height <span class="text-muted">(m)</span></label>
                         <input type="text" name="EmissionHeight" class="form-control">
                     </div>
                 </div>
                 <div class="form-row">
                     <div class="col-md-12 mb-3">
-                        <label class="address-inp">Emission 
+                        <label class="address-inp">Emission
                             Control
                             Method/ Efficiency </label>
                         <input type="text" name="EmissionControl" class="form-control">
+                    </div>
+                </div>
+                <!--------------------------            Here input empty        ------------------------------------ -->
+                <input type="hidden" name="empty">
+            </form>
+        </div>
+
+        <!-- 5th slide -->
+        <div id="container-form-3" class="from_group">
+            <form name="FugitiveAirEmissionsForm" id="FugitiveAirEmissionsForm">
+                <div class="form-row">
+                    <div class="header-address">
+                        <h4> Fugitive Air Emissions:</h4>
+                    </div>
+                    <div class="col-md-12 mb-3">
+                        <label class="address-inp">VOC/ HAP Source <span class="text-muted"> (Name & Number) </span>
+                        </label>
+                        <div class="row">
+                            <div class="col">
+                                <input type="text" class="form-control" placeholder="Name" name="vochapSource3Name">
+                            </div>
+                            <div class="col">
+                                <input type="number" class="form-control" placeholder="number"
+                                    name="vochapSource3Number">
+                            </div>
+                        </div>
+                    </div>
+                    <div class=" md-2 col-md-12 mb-3">
+                        <label class="address-inp">Component </label>
+                        <input type="text" name="component" class="form-control">
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="col-md-12 mb-3">
+                        <label class="address-inp">Uncontrolled Emission <span class="text-muted">(kg/h)</span>
+                        </label>
+                        <input type="number" name="uncontrolledEmission" class="form-control">
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="col-md-12 mb-3">
+                        <label class="address-inp">Control Efficiency <span class="text-muted">(%)</span>
+                        </label>
+                        <input type="number" name="controlEfficiency" class="form-control">
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="col-md-12 mb-3">
+                        <label class="address-inp">Controlled
+                            Emissions
+                            <span class="text-muted">(kg/h)</span>
+                        </label>
+                        <input type="number" name="controlledEmissions" class="form-control">
+                    </div>
+                </div>
+                <!--------------------------            Here input empty        ------------------------------------ -->
+                <input type="hidden" name="empty">
+            </form>
+            <form name="WaterConsumptionForm" id="WaterConsumptionForm">
+                <div class="form-row">
+                    <div class="header-address">
+                        <h4>Water Consumption :</h4>
+                    </div>
+                    <div class=" md-2 col-md-12 mb-3">
+                        <label class="address-inp">Process</label>
+                        <input type="text" name="process" class="form-control">
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class=" md-2 col-md-12 mb-3">
+                        <label class="address-inp">Average
+                            Consumption <span class="text-muted">(m&sup3;/hr)</span>
+                        </label>
+                        <input type="number" name="averageConsumption" class="form-control">
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class=" md-2 col-md-12 mb-3">
+                        <label class="address-inp">Maximum Consumption
+                            <span class="text-muted">(m&sup3;/hr)</span>
+                        </label>
+                        <input type="number" name="maximumConsumption" class="form-control">
+                    </div>
+                </div>
+                <div class="form-row  two-element">
+                    <div class="col-md-12 mb-3">
+                        <label class="address-inp">Treatment Required ?</label>
+                        <div class="radio">
+                            <div class="radio-item">
+                                <label>
+                                    <input type="radio" data-value=true name="isTreatmentRequired">
+                                    true
+                                </label>
+                            </div>
+                            <div class="radio-item">
+                                <label>
+                                    <input type="radio" data-value=false name="isTreatmentRequired">
+                                    false
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class=" md-2 col-md-12 mb-3">
+                        <label class="address-inp">If yes, please specify 
+                            type of treatment 
+                            </label>
+                        <textarea name="treatmentRequiredList" class="form-control" rows="3"></textarea>
                     </div>
                 </div>
                 <!--------------------------            Here input empty        ------------------------------------ -->
